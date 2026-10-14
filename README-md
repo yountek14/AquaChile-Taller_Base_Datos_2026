@@ -1,0 +1,25 @@
+# Proyecto AquaChile – Automatización de Evaluaciones Psicolaborales
+
+## Descripción
+Script SQL desarrollado en Oracle para gestionar solicitudes de evaluación psicolaboral, entrevistas, documentos e informes, incorporando validaciones y auditorías automáticas.
+
+## Cómo usarlo
+1. Abrir **Oracle SQL Developer** y conectarse a la base de datos correspondiente.
+2. Abrir el archivo `Proyecto_AquaChile_ordenado.sql`.
+3. Ejecutar el script con **F5 (Ejecutar script)**.
+4. Revisar los mensajes de salida para comprobar que los objetos se hayan creado correctamente.
+
+> Ejecutar con un usuario que tenga los permisos necesarios para crear tablas y triggers.
+
+## Cómo funciona
+El proyecto utiliza tablas relacionadas para almacenar las solicitudes, entrevistas, documentos e informes psicolaborales. Además, incorpora triggers que automatizan las siguientes tareas:
+
+- **Validación de entrevistas:** impide registrar una entrevista con fecha anterior a la solicitud.
+- **Auditoría de documentos:** registra automáticamente las operaciones de inserción de documentos.
+- **Sincronización de estados:** al completar un informe, actualiza el estado de la solicitud asociada.
+- **Auditoría de estados:** registra los cambios de estado de las solicitudes, incluyendo el estado anterior y el nuevo.
+
+## Tecnologías
+- Oracle Database
+- SQL y PL/SQL
+- Oracle SQL Developer
